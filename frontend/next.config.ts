@@ -5,6 +5,9 @@ const nextConfig = {
     NEXT_PUBLIC_API_URL:
       process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000",
   },
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 export default nextConfig;
