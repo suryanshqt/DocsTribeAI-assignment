@@ -42,7 +42,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/extract`,
+        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/extract`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
