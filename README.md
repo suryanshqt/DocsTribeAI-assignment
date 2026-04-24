@@ -246,11 +246,11 @@ The GPT-4o system prompt is designed around four principles:
 - [x] Good prompt design for structured extraction
 - [x] Strict JSON response handling
 - [x] No guessing — null/empty for missing fields
-- [x] Confidence score (bonus)
-- [x] Evidence snippets (bonus)
-- [x] Shorthand handling — OD, BD, TDS, SOS, PRN etc. (bonus)
-- [x] Deployment link (bonus)
-- [x] Docker setup (bonus)
+- [x] Confidence score 
+- [x] Evidence snippets 
+- [x] Shorthand handling — OD, BD, TDS, SOS, PRN etc. 
+- [x] Deployment link 
+- [x] Docker setup
 
 ---
 
