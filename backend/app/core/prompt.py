@@ -38,6 +38,18 @@ RULES:
 4. Separate lab tests from radiology tests
 5. confidence_score: 0.9-1.0 for clean text, 0.7-0.89 for moderate shorthand, 0.4-0.69 for heavy shorthand/incomplete
 6. evidence_snippets: quote the exact original text phrase used to extract each field
+7. For advice, only include explicit doctor recommendations (sentences where the doctor is clearly speaking and directing the patient). Never include what the patient says they are already doing.
+8. For conversational transcripts, infer chief_complaints from symptoms the patient describes and the doctor acknowledges (e.g. doctor asks follow-up questions about it) — do not leave empty if symptoms are discussed
+9. Common Hindi medical terms that must NOT be mistranslated:
+   - "वेटिंग" = urinary urgency (waiting to urinate), NOT weight gain
+   - "बर्निंग" = burning sensation, NOT burning (fire)
+   - "स्वेलिंग" = swelling, NOT spelling
+   - "ब्लीडिंग" = bleeding, NOT breeding
+   - "वोमिटिंग" = vomiting, NOT visiting
+   - "पेन" = pain, NOT pen
+   - "प्रेशर" = blood pressure, NOT pressure (physical)
+   - "शुगर" = blood sugar/diabetes, NOT sugar (food)
+10. Always output all field values in English, translating from Hindi where needed — exception: evidence_snippets should remain in original language as verbatim quotes
 
 Return this exact JSON structure:
 {
